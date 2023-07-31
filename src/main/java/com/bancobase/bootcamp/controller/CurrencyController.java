@@ -19,9 +19,10 @@ public class CurrencyController {
         this.currencyService = currencyService;
     }
 
-    @GetMapping("/currency")
+    @RequestMapping("/currency")
+    @CrossOrigin(origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST})
     public ResponseEntity<List<CurrencyDTO>> getAllCurrencies() {
-        List<CurrencyDTO> currencies = this.currencyService.getCurrencies();
+        List<CurrencyDTO> currencies = this.currencyService.getCombinedExchangeRateInfo();
         return new ResponseEntity<>(currencies, HttpStatus.OK);
     }
 
