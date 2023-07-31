@@ -8,6 +8,7 @@ import java.util.*;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<CustomerSchema, Long> {
+    // opciona para evital el null exepction
     Optional<CustomerSchema> findByCurp(String curp);
 
     List<CustomerSchema> findByNameContaining(String name);

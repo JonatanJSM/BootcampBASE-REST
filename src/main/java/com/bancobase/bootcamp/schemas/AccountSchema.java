@@ -2,7 +2,7 @@ package com.bancobase.bootcamp.schemas;
 
 import jakarta.persistence.*;
 import lombok.*;
-
+// son como los modelos de laravel
 @Getter
 @Setter
 @Entity

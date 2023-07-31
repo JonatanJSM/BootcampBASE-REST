@@ -10,3 +10,12 @@ public class BootcampBaseApplication {
         SpringApplication.run(BootcampBaseApplication.class, args);
     }
 }
+
+
+// No hay presentación
+
+// schemas persistencia la parte de la base de datos
+// repositories, capa de persistencia, traen los datos
+
+// services logica de negocio. Accede a la capa de base de datos
+
