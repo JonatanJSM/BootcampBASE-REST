@@ -35,8 +35,7 @@ public class CurrencyService {
             for (Map.Entry<String, Double> entry : exchangeRateResponse.getRates().entrySet()) {
                 String symbol = entry.getKey();
                 Double value = entry.getValue();
-                String name = "Juan";
-                //String name = symbolsNames.get(symbol).getDescription();
+                String name = symbolsNames.get(symbol).getDescription();
 
                 if (name != null) {
                     // Recuerdo que dijeron que se podría evitar esto

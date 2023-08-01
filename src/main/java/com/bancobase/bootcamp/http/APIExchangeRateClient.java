@@ -42,6 +42,7 @@ public class APIExchangeRateClient {
 
         String url = UriComponentsBuilder
                 .fromHttpUrl("https://api.exchangerate.host/symbols")
+                .queryParam("base", "MXN")
                 .toUriString();
 
         HttpEntity<String> headersAndBody = new HttpEntity<>(headers);
@@ -50,7 +51,7 @@ public class APIExchangeRateClient {
                 .exchange(url, HttpMethod.GET, headersAndBody, SymbolsNameResponse.class);
 
         if (responseEntity.getStatusCode().is2xxSuccessful()) {
-            return new SymbolsNameResponse();
+            return responseEntity.getBody();
         }
 
         throw ServiceProviderException
