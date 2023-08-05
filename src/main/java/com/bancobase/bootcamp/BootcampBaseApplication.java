@@ -19,3 +19,9 @@ public class BootcampBaseApplication {
 
 // services logica de negocio. Accede a la capa de base de datos
 
+// Spgring Boot
+    // trae el toncat
+    // tienes capas, servicios, datos, controladores, vista
+    // spring initializr para ver qué tecnologias utilizar
+    // bealdung para info informal
+

@@ -5,9 +5,10 @@ import com.bancobase.bootcamp.dto.request.PreCustomerInfo;
 import com.bancobase.bootcamp.exceptions.BusinessException;
 import com.bancobase.bootcamp.repositories.CustomerRepository;
 import com.bancobase.bootcamp.schemas.*;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
-
+@Service
 public class CustomerService {
 
     private final AccountService accountService;
@@ -18,6 +19,7 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
+    //Tarea
     public CustomerInfoDTO getCustomerById(Long customerId) {
         Optional<CustomerSchema> person = customerRepository
                 .findById(customerId);
