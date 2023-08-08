@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/currency")
+@CrossOrigin(origins = {"*"})
 public class CurrencyController {
     private final CurrencyService currencyService;
 
@@ -19,8 +21,7 @@ public class CurrencyController {
         this.currencyService = currencyService;
     }
 
-    @RequestMapping("/currency")
-    @CrossOrigin(origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST})
+    @GetMapping("")
     public ResponseEntity<List<CurrencyDTO>> getAllCurrencies() {
         List<CurrencyDTO> currencies = this.currencyService.getCombinedExchangeRateInfo();
         return new ResponseEntity<>(currencies, HttpStatus.OK);

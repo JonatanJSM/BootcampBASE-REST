@@ -29,6 +29,12 @@ public class CustomerController {
          return new ResponseEntity<>(customer, HttpStatus.OK);
     }
 
+    @GetMapping("/{customerId}")
+    public ResponseEntity<CustomerInfoDTO> getCustomerById(@PathVariable Long customerId){
+        CustomerInfoDTO customer = this.customerService.getCustomerById(customerId);
+        return new ResponseEntity<>(customer, HttpStatus.OK);
+    }
+
     @PutMapping
     @Operation(summary = "Create a new customer")
     public ResponseEntity<CustomerDTO> createCustomer(@RequestBody PreCustomerInfo info){
