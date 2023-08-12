@@ -12,7 +12,7 @@ import java.util.*;
 
 //Controlador es para acceso al servicio (endpoit)
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/customers")
 @CrossOrigin(origins = {"*"})
 public class CustomerController {
 
